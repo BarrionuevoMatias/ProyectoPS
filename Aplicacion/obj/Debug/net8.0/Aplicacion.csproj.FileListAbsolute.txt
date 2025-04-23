@@ -1,0 +1,15 @@
+C:\Users\matia\source\repos\PS\Aplicacion\bin\Debug\net8.0\Aplicacion.deps.json
+C:\Users\matia\source\repos\PS\Aplicacion\bin\Debug\net8.0\Aplicacion.dll
+C:\Users\matia\source\repos\PS\Aplicacion\bin\Debug\net8.0\Aplicacion.pdb
+C:\Users\matia\source\repos\PS\Aplicacion\bin\Debug\net8.0\Dominio.dll
+C:\Users\matia\source\repos\PS\Aplicacion\bin\Debug\net8.0\Dominio.pdb
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.csproj.AssemblyReference.cache
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.AssemblyInfoInputs.cache
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.AssemblyInfo.cs
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.csproj.CoreCompileInputs.cache
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.csproj.Up2Date
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.dll
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\refint\Aplicacion.dll
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.pdb
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\ref\Aplicacion.dll
