@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{C3D5D37F-5785-4ED3-BC83-0A4406FCC3AC}|PS\\PS.csproj|c:\\users\\matia\\source\\repos\\ps\\ps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3D5D37F-5785-4ED3-BC83-0A4406FCC3AC}|PS\\PS.csproj|solutionrelative:ps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D059D80-ACED-4201-8D8A-218E5D1A6D20}|Aplicacion\\Aplicacion.csproj|c:\\users\\matia\\source\\repos\\ps\\aplicacion\\depencenciinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D059D80-ACED-4201-8D8A-218E5D1A6D20}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\depencenciinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +28,22 @@
               "RelativeDocumentMoniker": "PS\\Program.cs",
               "ToolTip": "C:\\Users\\matia\\source\\repos\\PS\\PS\\Program.cs",
               "RelativeToolTip": "PS\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAmwBEAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T17:53:21.781Z",
+              "WhenOpened": "2025-04-24T00:24:00.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepencenciInjection.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\source\\repos\\PS\\Aplicacion\\DepencenciInjection.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\DepencenciInjection.cs",
+              "ToolTip": "C:\\Users\\matia\\source\\repos\\PS\\Aplicacion\\DepencenciInjection.cs",
+              "RelativeToolTip": "Aplicacion\\DepencenciInjection.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAlwCEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:23:54.68Z",
               "EditorCaption": ""
             }
           ]

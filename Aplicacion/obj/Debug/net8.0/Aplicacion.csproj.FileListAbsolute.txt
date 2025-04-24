@@ -13,3 +13,4 @@ C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.dll
 C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\refint\Aplicacion.dll
 C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.pdb
 C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\ref\Aplicacion.dll
+C:\Users\matia\source\repos\PS\Aplicacion\obj\Debug\net8.0\Aplicacion.sourcelink.json

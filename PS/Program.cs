@@ -1,10 +1,13 @@
 ﻿using System;
 using Infraestructura;
 using Infraestructura.datos;
-
+using Aplicacion;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Aplicacion.commands.Proposals;
+using MediatR;
+
 
 using Microsoft.Extensions.Hosting;
 
@@ -13,9 +16,11 @@ var builder = Host.CreateDefaultBuilder(args);
 builder.ConfigureServices((context, services) =>
 {
     services.AddInfrastructure(context.Configuration);
+    services.AddApplication();
 
-    // Otros servicios...
+
 });
+
 
 var app = builder.Build();
 

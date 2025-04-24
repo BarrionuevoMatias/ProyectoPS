@@ -17,3 +17,4 @@ C:\Users\matia\source\repos\PS\Infraestructura\obj\Debug\net8.0\refint\Infraestr
 C:\Users\matia\source\repos\PS\Infraestructura\obj\Debug\net8.0\Infraestructura.pdb
 C:\Users\matia\source\repos\PS\Infraestructura\obj\Debug\net8.0\Infraestructura.genruntimeconfig.cache
 C:\Users\matia\source\repos\PS\Infraestructura\obj\Debug\net8.0\ref\Infraestructura.dll
+C:\Users\matia\source\repos\PS\Infraestructura\obj\Debug\net8.0\Infraestructura.sourcelink.json
