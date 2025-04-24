@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\matia\\source\\repos\\PS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3D5D37F-5785-4ED3-BC83-0A4406FCC3AC}|PS\\PS.csproj|c:\\users\\matia\\source\\repos\\ps\\ps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3D5D37F-5785-4ED3-BC83-0A4406FCC3AC}|PS\\PS.csproj|solutionrelative:ps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D059D80-ACED-4201-8D8A-218E5D1A6D20}|Aplicacion\\Aplicacion.csproj|c:\\users\\matia\\source\\repos\\ps\\aplicacion\\depencenciinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D059D80-ACED-4201-8D8A-218E5D1A6D20}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\depencenciinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D059D80-ACED-4201-8D8A-218E5D1A6D20}|Aplicacion\\Aplicacion.csproj|c:\\users\\matia\\source\\repos\\ps\\aplicacion\\queries\\handlers\\getpendingstepsbyrolehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D059D80-ACED-4201-8D8A-218E5D1A6D20}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\queries\\handlers\\getpendingstepsbyrolehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D059D80-ACED-4201-8D8A-218E5D1A6D20}|Aplicacion\\Aplicacion.csproj|c:\\users\\matia\\source\\repos\\ps\\aplicacion\\queries\\handlers\\getallproposalshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D059D80-ACED-4201-8D8A-218E5D1A6D20}|Aplicacion\\Aplicacion.csproj|solutionrelative:aplicacion\\queries\\handlers\\getallproposalshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3D5D37F-5785-4ED3-BC83-0A4406FCC3AC}|PS\\PS.csproj|c:\\users\\matia\\source\\repos\\ps\\ps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3D5D37F-5785-4ED3-BC83-0A4406FCC3AC}|PS\\PS.csproj|solutionrelative:ps\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\source\\repos\\PS\\PS\\Program.cs",
-              "RelativeDocumentMoniker": "PS\\Program.cs",
-              "ToolTip": "C:\\Users\\matia\\source\\repos\\PS\\PS\\Program.cs",
-              "RelativeToolTip": "PS\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T00:24:00.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "DepencenciInjection.cs",
               "DocumentMoniker": "C:\\Users\\matia\\source\\repos\\PS\\Aplicacion\\DepencenciInjection.cs",
               "RelativeDocumentMoniker": "Aplicacion\\DepencenciInjection.cs",
               "ToolTip": "C:\\Users\\matia\\source\\repos\\PS\\Aplicacion\\DepencenciInjection.cs",
               "RelativeToolTip": "Aplicacion\\DepencenciInjection.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAlwCEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T00:23:54.68Z",
+              "WhenOpened": "2025-04-24T02:24:55.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetPendingStepsByRoleHandler.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\source\\repos\\PS\\Aplicacion\\queries\\handlers\\GetPendingStepsByRoleHandler.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\queries\\handlers\\GetPendingStepsByRoleHandler.cs",
+              "ToolTip": "C:\\Users\\matia\\source\\repos\\PS\\Aplicacion\\queries\\handlers\\GetPendingStepsByRoleHandler.cs",
+              "RelativeToolTip": "Aplicacion\\queries\\handlers\\GetPendingStepsByRoleHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T02:24:01.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetAllProposalsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\source\\repos\\PS\\Aplicacion\\queries\\handlers\\GetAllProposalsHandler.cs",
+              "RelativeDocumentMoniker": "Aplicacion\\queries\\handlers\\GetAllProposalsHandler.cs",
+              "ToolTip": "C:\\Users\\matia\\source\\repos\\PS\\Aplicacion\\queries\\handlers\\GetAllProposalsHandler.cs",
+              "RelativeToolTip": "Aplicacion\\queries\\handlers\\GetAllProposalsHandler.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAsAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T02:23:07.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\source\\repos\\PS\\PS\\Program.cs",
+              "RelativeDocumentMoniker": "PS\\Program.cs",
+              "ToolTip": "C:\\Users\\matia\\source\\repos\\PS\\PS\\Program.cs",
+              "RelativeToolTip": "PS\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T00:24:00.506Z",
               "EditorCaption": ""
             }
           ]

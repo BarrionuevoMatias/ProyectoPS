@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Aplicacion.commands.Proposals
 {
-    class ProcessApprovalCommand : IRequest<bool>
+    public class ProcessApprovalCommand : IRequest<bool>
     {
         public long StepId { get; set; }
         public int UserId { get; set; }

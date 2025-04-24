@@ -24,6 +24,8 @@ namespace Aplicacion
             // Queries
             services.AddScoped<IRequestHandler<GetProposalStatusQuery, string>, GetProposalStatusHandler>();
             services.AddScoped<IRequestHandler<GetProposalByIdQuery, ProposalDto>, GetProposalByIdHandler>();
+            services.AddScoped<IRequestHandler<GetAllProposalsQuery, List<ProposalSummaryDto>>, GetAllProposalsHandler>();
+            services.AddScoped<IRequestHandler<GetPendingStepsByRoleQuery, List<PendingStepDto>>, GetPendingStepsByRoleHandler>();
 
             // Services
             services.AddScoped<IApprovalWorkflowService, ApprovalWorkflowService>();
