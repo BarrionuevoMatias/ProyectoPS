@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aplicacion.DTOs
 {
-    class ProposalSummaryDto
+    public class ProposalSummaryDto
     {
         public int Id { get; set; }
         public string Title { get; set; }

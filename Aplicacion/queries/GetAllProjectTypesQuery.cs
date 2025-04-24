@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using MediatR;
 using Aplicacion.DTOs;
 
-namespace Aplicacion.queries.handlers
+namespace Aplicacion.queries
 {
-    class GetAllProjectTypesQuery : IRequest<List<ProjectTypeDto>>
+    public class GetAllProjectTypesQuery : IRequest<List<ProjectTypeDto>>
     {
     }
 }

@@ -36,6 +36,7 @@ namespace Aplicacion.services
                 {
                     ProjectProposalId = proposal.Id,
                     ApproverRoleId = rule.ApproverRoleId.Value,
+                    ApproverRole = rule.ApproverRole,
                     StepOrder = rule.StepOrder,
                     Status = 1 // Pendiente
                 };

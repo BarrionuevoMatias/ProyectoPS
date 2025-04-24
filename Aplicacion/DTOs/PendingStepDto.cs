@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aplicacion.DTOs
 {
-    class PendingStepDto
+    public class PendingStepDto
     {
         public long StepId { get; set; }
         public int ProposalId { get; set; }

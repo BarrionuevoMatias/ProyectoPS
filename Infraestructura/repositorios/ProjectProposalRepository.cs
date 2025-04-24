@@ -38,6 +38,11 @@ namespace Infraestructura.repositorios
                 .Include(pp => pp.StatusNavigation)
                 .Include(pp => pp.CreatedByNavigation)
                 .Include(pp => pp.ProjectApprovalSteps)
+                    .ThenInclude(pas => pas.ApproverRole)
+                .Include(pp => pp.ProjectApprovalSteps)
+                    .ThenInclude(pas => pas.StatusNavigation)
+                .Include(pp => pp.ProjectApprovalSteps)
+                    .ThenInclude(pas => pas.ApproverUser)
                 .FirstOrDefaultAsync(pp => pp.Id == id);
         }
 

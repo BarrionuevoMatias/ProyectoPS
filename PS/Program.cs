@@ -22,23 +22,12 @@ namespace PS
         {
             var host = CreateHostBuilder(args).Build();
 
-            // Ejecutar migraciones al inicio
+            
             using (var scope = host.Services.CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-                try
-                {
-                    var canConnect = await dbContext.Database.CanConnectAsync();
-                    Console.WriteLine(canConnect
-                        ? "Conexión exitosa a la base de datos"
-                        : "❌ No se pudo conectar a la base de datos");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error al conectar a la base de datos: {ex.Message}");
-                    return;
-                }
+                
             }
 
             await RunApplication(host);
@@ -54,51 +43,66 @@ namespace PS
 
         static async Task RunApplication(IHost host)
         {
+            Console.WriteLine("Iniciando la aplicación...");
             using var scope = host.Services.CreateScope();
-            var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
-            var userRepo = scope.ServiceProvider.GetRequiredService<IUserRepository>();
 
-            while (true)
+            try
             {
-                Console.Clear();
-                Console.WriteLine("Sistema de Aprobación de Proyectos");
-                Console.WriteLine("=================================");
-                Console.WriteLine("1. Crear nueva propuesta de proyecto");
-                Console.WriteLine("2. Ver estado de proyectos");
-                Console.WriteLine("3. Aprobar pasos pendientes");
-                Console.WriteLine("4. Salir");
-                Console.Write("Seleccione una opción: ");
+                var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
 
-                var option = Console.ReadLine();
 
-                try
+                var userRepo = scope.ServiceProvider.GetRequiredService<IUserRepository>();
+
+                while (true)
                 {
-                    switch (option)
+                    Console.Clear();
+                    Console.WriteLine("Sistema de Aprobación de Proyectos");
+                    Console.WriteLine("=================================");
+                    Console.WriteLine("1. Crear nueva propuesta de proyecto");
+                    Console.WriteLine("2. Ver estado de proyectos");
+                    Console.WriteLine("3. Aprobar pasos pendientes");
+                    Console.WriteLine("4. Salir");
+                    Console.Write("Seleccione una opción: ");
+
+                    var option = Console.ReadLine();
+
+                    try
                     {
-                        case "1":
-                            await CreateNewProposal(mediator, userRepo);
-                            break;
-                        case "2":
-                            await ViewProjectStatus(mediator);
-                            break;
-                        case "3":
-                            await ApprovePendingSteps(mediator, userRepo);
-                            break;
-                        case "4":
-                            return;
-                        default:
-                            Console.WriteLine("Opción no válida. Presione cualquier tecla para continuar...");
-                            Console.ReadKey();
-                            break;
+                        switch (option)
+                        {
+                            case "1":
+                                await CreateNewProposal(mediator, userRepo);
+                                break;
+                            case "2":
+                                await ViewProjectStatus(mediator);
+                                break;
+                            case "3":
+                                await ApprovePendingSteps(mediator, userRepo);
+                                break;
+                            case "4":
+                                return;
+                            default:
+                                Console.WriteLine("Opción no válida. Presione cualquier tecla para continuar...");
+                                Console.ReadKey();
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error: {ex.Message}");
+                        Console.WriteLine("Presione cualquier tecla para continuar...");
+                        Console.ReadKey();
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error: {ex.Message}");
-                    Console.WriteLine("Presione cualquier tecla para continuar...");
-                    Console.ReadKey();
-                }
+
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.ReadKey();
+
+            }
+            
         }
 
         static async Task CreateNewProposal(IMediator mediator, IUserRepository userRepo)
@@ -136,7 +140,7 @@ namespace PS
             }
 
             // Obtener áreas disponibles
-            var areas = await mediator.Send(new GetAllAreasQuery());
+            List<AreaDto> areas = await mediator.Send(new GetAllAreasQuery());
             Console.WriteLine("\nÁreas disponibles:");
             foreach (var area in areas)
             {
@@ -149,7 +153,7 @@ namespace PS
             }
 
             // Obtener tipos de proyecto disponibles
-            var projectTypes = await mediator.Send(new GetAllProjectTypesQuery());
+            List<ProjectTypeDto> projectTypes = await mediator.Send(new GetAllProjectTypesQuery());
             Console.WriteLine("\nTipos de proyecto disponibles:");
             foreach (var type in projectTypes)
             {
@@ -226,7 +230,7 @@ namespace PS
             }
 
             // Obtener detalles del proyecto
-            var projectDetails = await mediator.Send(new GetProposalByIdQuery { ProposalId = proposalId });
+            ProposalDto projectDetails = await mediator.Send(new GetProposalByIdQuery { ProposalId = proposalId });
 
             Console.Clear();
             Console.WriteLine($"Detalles del Proyecto ID: {projectDetails.Id}");
@@ -242,19 +246,28 @@ namespace PS
             Console.WriteLine($"Fecha creación: {projectDetails.CreateAt}");
 
             Console.WriteLine("\nPasos de aprobación:");
-            foreach (var step in projectDetails.Steps)
+            if(projectDetails.Steps == null || !projectDetails.Steps.Any())
             {
-                Console.WriteLine($"\nPaso {step.StepOrder}:");
-                Console.WriteLine($"  Rol aprobador: {step.ApproverRole}");
-                Console.WriteLine($"  Estado: {step.Status}");
-                if (step.ApproverUser != null)
+                Console.WriteLine("No hay pasos de aprobación registrados.");
+                Console.WriteLine("Presione cualquier tecla para continuar...");
+                Console.ReadKey();
+                return;
+            }
+            else { 
+                foreach (ApprovalStepDto step in projectDetails.Steps)
                 {
-                    Console.WriteLine($"  Aprobado por: {step.ApproverUser}");
-                    Console.WriteLine($"  Fecha decisión: {step.DecisionDate}");
-                }
-                if (!string.IsNullOrEmpty(step.Observations))
-                {
-                    Console.WriteLine($"  Observaciones: {step.Observations}");
+                    Console.WriteLine($"\nPaso {step.StepOrder}:");
+                    Console.WriteLine($"  Rol aprobador: {step.ApproverRole}");
+                    Console.WriteLine($"  Estado: {step.Status}");
+                    if (step.ApproverUser != null)
+                    {
+                        Console.WriteLine($"  Aprobado por: {step.ApproverUser}");
+                        Console.WriteLine($"  Fecha decisión: {step.DecisionDate}");
+                    }
+                    if (!string.IsNullOrEmpty(step.Observations))
+                    {
+                        Console.WriteLine($"  Observaciones: {step.Observations}");
+                    }
                 }
             }
 
@@ -283,7 +296,7 @@ namespace PS
             Console.WriteLine($"\nBienvenido {user.Name} ({user.ApproverRole.Name})");
 
             // Obtener pasos pendientes para el rol del usuario
-            var pendingSteps = await mediator.Send(new GetPendingStepsByRoleQuery { RoleId = user.Role });
+            List < PendingStepDto> pendingSteps = await mediator.Send(new GetPendingStepsByRoleQuery { RoleId = user.Role });
 
             if (!pendingSteps.Any())
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,12 +42,12 @@ namespace Aplicacion.queries.handlers
                 {
                     Id = s.Id,
                     StepOrder = s.StepOrder,
-                    ApproverRole = s.ApproverRole.Name,
-                    Status = s.StatusNavigation.Name,
-                    ApproverUser = s.ApproverUser?.Name,
-                    DecisionDate = s.DecisionDate,
-                    Observations = s.Observations
-                }).OrderBy(s => s.StepOrder).ToList()
+                    ApproverRole = s.ApproverRole.Name ?? "N/A",
+                    Status = s.StatusNavigation.Name ?? "N/A",
+                    ApproverUser = s.ApproverUser?.Name ?? "No asignado",
+                    DecisionDate = s.DecisionDate?.ToString("g") ?? "No asignado",
+                    Observations = s.Observations ?? "no asignado"
+                }).OrderBy(s => s.StepOrder).ToList() ?? new List<ApprovalStepDto>() // Ensure Steps is never null
             };
         }
     }

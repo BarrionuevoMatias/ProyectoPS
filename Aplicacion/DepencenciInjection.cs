@@ -10,6 +10,7 @@ using Aplicacion.queries;
 using Aplicacion.services;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace Aplicacion
 {
@@ -29,6 +30,8 @@ namespace Aplicacion
 
             // Services
             services.AddScoped<IApprovalWorkflowService, ApprovalWorkflowService>();
+
+            services.AddMediatR(Assembly.GetExecutingAssembly());
 
             return services;
         }

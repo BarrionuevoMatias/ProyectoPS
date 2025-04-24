@@ -26,6 +26,7 @@ namespace Aplicacion.queries.handlers
                 Id = p.Id,
                 Title = p.Title,
                 Status = p.StatusNavigation.Name
+
             }).ToList();
         }
     }

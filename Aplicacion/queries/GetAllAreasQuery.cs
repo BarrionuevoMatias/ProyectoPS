@@ -8,7 +8,7 @@ using Aplicacion.DTOs;
 
 namespace Aplicacion.queries
 {
-    class GetAllAreasQuery : IRequest<List<AreaDto>>
+   public class GetAllAreasQuery : IRequest<List<AreaDto>>
     {
     }
 }
